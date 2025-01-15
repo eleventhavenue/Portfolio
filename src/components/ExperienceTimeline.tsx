@@ -11,10 +11,10 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: "Founder & Developer",
+    title: "Founder & Builder",
     company: "VC VANTAGE",
     date: "Present",
-    description: "Built and deployed an AI-powered due diligence reporting tool for venture capital funds and angel investors. Created interactive dashboards using Python and TypeScript to visualize investment metrics and implemented machine learning algorithms for market analysis."
+    description: "Built and deployed an AI-powered due diligence reporting tool for venture capital funds and angel investors. Created interactive dashboards using TypeScript to visualize investment metrics and market analysis."
   },
   {
     title: "Market and Strategy Data Analyst",
@@ -23,16 +23,16 @@ const experiences: Experience[] = [
     description: "Analyze market data using Python and SQL for renewable energy strategies. Create Power BI dashboards to track market trends and develop predictive models for market assessment."
   },
   {
-    title: "Product Design and Founder",
+    title: "Product Design and Creative Director",
     company: "Eleventh Avenue",
     date: "Present",
     description: "Launched an e-commerce fashion brand achieving 100% profit margins in first quarter. Established multi-region supplier partnerships and implemented comprehensive digital marketing strategies."
   },
   {
-    title: "Investment Analyst & Due Diligence Lead",
+    title: "Investment Analyst & Due Diligence Assistant",
     company: "Olorire Inc.",
     date: "2024",
-    description: "Led due diligence for tech investments totaling $300K USD. Developed evaluation frameworks and created detailed investment memorandums covering market analysis and financial projections."
+    description: "Assisted due diligence for tech investments totaling $300K USD. Prepared documents for founder interviews and validated technical capabilities of potential investment targets."
   },
   {
     title: "Marketing and Management Consultant Intern",
