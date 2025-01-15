@@ -1,0 +1,30 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="notionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2D3748;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Browser window frame -->
+  <rect x="100" y="40" width="200" height="120" rx="8" 
+        fill="white" stroke="url(#notionGradient)" stroke-width="2"/>
+  
+  <!-- Special characters -->
+  <text x="140" y="100" font-family="serif" font-size="24" fill="url(#notionGradient)">§</text>
+  <text x="180" y="100" font-family="serif" font-size="24" fill="url(#notionGradient)">¶</text>
+  <text x="220" y="100" font-family="serif" font-size="24" fill="url(#notionGradient)">©</text>
+  <text x="260" y="100" font-family="serif" font-size="24" fill="url(#notionGradient)">™</text>
+  
+  <!-- Chrome extension icon suggestion -->
+  <circle cx="120" cy="60" r="6" fill="url(#notionGradient)"/>
+  
+  <!-- Extension name -->
+  <text x="200" y="140" 
+        font-family="sans-serif" 
+        font-size="14" 
+        text-anchor="middle" 
+        fill="url(#notionGradient)">
+    Notion Special Characters
+  </text>
+</svg>

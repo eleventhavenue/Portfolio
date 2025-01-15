@@ -1,27 +1,108 @@
 <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#22D3EE;stop-opacity:1" />
+    <!-- Main gradient -->
+    <linearGradient id="emotiveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EC4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
     </linearGradient>
+    
+    <!-- Neural pattern gradient -->
+    <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#EC4899;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.2" />
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="softGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Chat bubble clip path -->
+    <clipPath id="bubbleShape">
+      <path d="M320,100 Q380,100 380,150 Q380,200 320,200 L80,200 Q20,200 20,150 Q20,100 80,100 Z" />
+    </clipPath>
   </defs>
-  
-  <!-- Background glow effect -->
-  <circle cx="200" cy="100" r="50" fill="url(#glowGradient)" opacity="0.1" filter="blur(20px)" />
-  
-  <!-- Main text -->
-  <text x="200" y="110" 
-        font-family="sans-serif" 
-        font-weight="bold" 
-        font-size="48" 
-        text-anchor="middle" 
-        fill="url(#glowGradient)">
-    RANT2ME
+
+  <!-- Background neural pattern -->
+  <g opacity="0.1">
+    <path d="M0,100 Q100,150 200,100 Q300,50 400,100" 
+          stroke="url(#neuralGradient)" 
+          fill="none" 
+          stroke-width="1" />
+    <path d="M0,120 Q100,170 200,120 Q300,70 400,120" 
+          stroke="url(#neuralGradient)" 
+          fill="none" 
+          stroke-width="1" />
+    <path d="M0,140 Q100,190 200,140 Q300,90 400,140" 
+          stroke="url(#neuralGradient)" 
+          fill="none" 
+          stroke-width="1" />
+  </g>
+
+  <!-- Main text with emotive styling -->
+  <g transform="translate(40, 130)">
+    <text 
+      font-family="Arial, sans-serif"
+      font-weight="bold"
+      font-size="64"
+      fill="url(#emotiveGradient)"
+      filter="url(#softGlow)"
+      letter-spacing="2"
+    >
+      RANT2ME
+    </text>
+  </g>
+
+  <!-- Neural network nodes -->
+  <g transform="translate(200, 100)">
+    {[0, 60, 120, 180, 240, 300].map((angle) => (
+      <g transform={`rotate(${angle})`}>
+        <circle 
+          cx="80" 
+          cy="0" 
+          r="3" 
+          fill="url(#emotiveGradient)" 
+          opacity="0.6"
+        />
+        <path 
+          d="M40,0 L80,0" 
+          stroke="url(#emotiveGradient)" 
+          stroke-width="1" 
+          opacity="0.3"
+        />
+      </g>
+    ))}
+  </g>
+
+  <!-- Abstract emotional indicators -->
+  <g transform="translate(320, 80)">
+    <path 
+      d="M-10,-10 Q0,0 10,-10" 
+      stroke="url(#emotiveGradient)" 
+      stroke-width="3" 
+      fill="none" 
+      opacity="0.8"
+    />
+    <path 
+      d="M-15,0 Q0,10 15,0" 
+      stroke="url(#emotiveGradient)" 
+      stroke-width="3" 
+      fill="none" 
+      opacity="0.8"
+    />
+  </g>
+
+  <!-- Tagline -->
+  <text 
+    x="200" 
+    y="180" 
+    font-family="Arial, sans-serif"
+    font-size="14"
+    fill="#666"
+    text-anchor="middle"
+    letter-spacing="3"
+  >
+    AI COMPANION
   </text>
-  
-  <!-- Decorative elements suggesting AI/technology -->
-  <circle cx="120" cy="100" r="4" fill="url(#glowGradient)" opacity="0.6" />
-  <circle cx="280" cy="100" r="4" fill="url(#glowGradient)" opacity="0.6" />
-  <line x1="125" y1="100" x2="140" y2="100" stroke="url(#glowGradient)" stroke-width="2" opacity="0.4" />
-  <line x1="260" y1="100" x2="275" y2="100" stroke="url(#glowGradient)" stroke-width="2" opacity="0.4" />
 </svg>

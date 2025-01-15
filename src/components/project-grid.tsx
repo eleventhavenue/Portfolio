@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: "RANT2ME",
     subtitle: "AI Companion Platform (Coming Soon)",
     description: "Developing an emotionally intelligent AI companion app powered by Hume AI's EVI 2.",
-    image: "/rant2me-logo.svg",  // updated path to SVG
+    image: "/rant.png",  // updated path to SVG
     tags: ["AI", "TypeScript", "EVI 2", "Coming Soon"],
     links: {},
     featured: true
@@ -36,6 +36,28 @@ const projects: Project[] = [
       live: "https://vc-vantage.com"
     },
     featured: true
+  },
+  {
+    title: "Notion Special Characters",
+    subtitle: "Chrome Extension",
+    description: "Browser extension that enhances Notion's writing experience by providing quick access to special characters and symbols.",
+    image: "/notion-special-chars-logo.svg",
+    tags: ["Chrome Extension", "JavaScript", "Productivity"],
+    links: {
+      live: "https://chromewebstore.google.com/detail/notion-special-characters/polboheookaggjhobfhkcancdgckccbb"
+    },
+    featured: false
+  },
+  {
+    title: "ChatGPT Consolidator",
+    subtitle: "Chrome Extension",
+    description: "Extension that improves ChatGPT experience by consolidating conversations and enhancing chat management.",
+    image: "/chatgpt-consolidator-logo.svg",
+    tags: ["Chrome Extension", "JavaScript", "AI Tools"],
+    links: {
+      live: "https://chromewebstore.google.com/detail/chatgpt-consolidator/iiceiegkpphpmbodonndapmgcefekojc"
+    },
+    featured: false
   }
 ];
 
