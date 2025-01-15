@@ -20,7 +20,7 @@ const experiences: Experience[] = [
     title: "Market and Strategy Data Analyst",
     company: "SustainAble Strategies Africa",
     date: "Present",
-    description: "Analyze market data using Python and SQL for renewable energy strategies. Create Power BI dashboards to track market trends and develop predictive models for market assessment."
+    description: "Analysis of market data for renewable energy strategies. Tracking market trends and developing predictive models for market assessment."
   },
   {
     title: "Product Design and Creative Director",
@@ -32,7 +32,7 @@ const experiences: Experience[] = [
     title: "Investment Analyst & Due Diligence Assistant",
     company: "Olorire Inc.",
     date: "2024",
-    description: "Assisted due diligence for tech investments totaling $300K USD. Prepared documents for founder interviews and validated technical capabilities of potential investment targets."
+    description: "Provided due diligence research for tech investments totaling $300K USD. Prepared documents for founder interviews and validated technical capabilities of potential investment targets."
   },
   {
     title: "Marketing and Management Consultant Intern",
