@@ -167,12 +167,12 @@ export default function Home() {
             viewport={{ once: true }}
             className="py-24"
           >
-            <h2 className="text-4xl font-serif mb-12">Technical Skills</h2>
+            <h2 className="text-4xl font-serif mb-12">Skills</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div>
                 <h3 className="text-xl font-bold mb-4">Analytics Tools</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Python', 'SQL', 'R', 'Power BI'].map((skill) => (
+                  {['Python', 'SQL', 'Power BI'].map((skill) => (
                     <span key={skill} className="px-3 py-1 bg-light-surface/50 dark:bg-dark-surface/50 rounded-full text-sm">
                       {skill}
                     </span>
@@ -180,7 +180,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-4">Programming</h3>
+                <h3 className="text-xl font-bold mb-4">Programming (Thru Gen AI)</h3>
                 <div className="flex flex-wrap gap-2">
                   {['Java', 'TypeScript', 'TSX'].map((skill) => (
                     <span key={skill} className="px-3 py-1 bg-light-surface/50 dark:bg-dark-surface/50 rounded-full text-sm">

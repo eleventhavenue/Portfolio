@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: "RANT2ME",
     subtitle: "AI Companion Platform (Coming Soon)",
     description: "Developing an emotionally intelligent AI companion app powered by Hume AI's EVI 2.",
-    image: "/rant2me-logo.svg",  // updated path to SVG
+    image: "/rant.png",  // updated path to SVG
     tags: ["AI", "TypeScript", "EVI 2", "Coming Soon"],
     links: {},
     featured: true
