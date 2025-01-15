@@ -106,7 +106,7 @@ export default function Home() {
                 className="text-5xl md:text-7xl font-serif mb-4"
               >
                 Creating with
-                <span className="font-serif italic text-light-accent dark:text-cyan-400"> intention</span>
+                <span className="font-serif italic text-light-accent dark:text-cyan-400"> Consciousness</span>
               </motion.h2>
               <div className="w-24 h-px bg-light-accent/20 dark:bg-cyan-400/20 mx-auto mt-8" />
             </div>
