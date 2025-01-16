@@ -9,6 +9,7 @@ import ProjectsGrid from './components/project-grid';
 import { motion } from 'framer-motion';
 import VisibleTundeAnimation from './components/VisibleTundeAnimation';
 import { ThemeProvider } from './context/ThemeContext';
+import { Helmet } from 'react-helmet';  // <-- 1) Import Helmet
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,11 +25,28 @@ export default function Home() {
 
   return (
     <ThemeProvider>
+      {/* 2) Add Helmet block to set up SEO-related meta tags */}
+      <Helmet>
+        <title>Tunde Ogunremi | Portfolio</title>
+        <meta
+          name="description"
+          content="Welcome to the official portfolio of Tunde Ogunremi. Explore my experience, featured projects, and the creative vision behind my work."
+        />
+        {/* canonical URL can be your domain */}
+        <link rel="canonical" href="https://www.yourdomain.com" />
+        
+        {/* Optional keywords meta tag (less influential than it once was) */}
+        <meta
+          name="keywords"
+          content="Tunde Ogunremi, portfolio, machine learning, data analytics, projects, Eleventh Avenue Studios"
+        />
+      </Helmet>
+
       <div className="min-h-screen bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text">
         <Navigation />
 
         {/* Hero Section */}
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -41,7 +59,7 @@ export default function Home() {
 
           {/* Subtitle and scroll indicator */}
           <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-center">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -49,7 +67,7 @@ export default function Home() {
             >
               I create things that matter
             </motion.p>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
@@ -60,12 +78,11 @@ export default function Home() {
             </motion.div>
           </div>
         </motion.section>
-        
-        <main className="px-8 max-w-6xl mx-auto">
 
-        {/* Experience Section */}
+        <main className="px-8 max-w-6xl mx-auto">
+          {/* Experience Section */}
           <section className="py-24">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -74,11 +91,11 @@ export default function Home() {
               <h2 className="text-4xl font-serif">What I've Done</h2>
             </motion.div>
             <ExperienceTimeline />
-          </section>  
+          </section>
 
           {/* Projects Section */}
           <section className="py-24">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -89,17 +106,15 @@ export default function Home() {
             <ProjectsGrid />
           </section>
 
-          
-
           {/* Vision Section */}
-          <motion.section 
+          <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="py-32"
           >
             <div className="max-w-5xl mx-auto text-center mb-24">
-              <motion.h2 
+              <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -118,9 +133,11 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                <h3 className="text-3xl font-serif mb-8 text-light-text dark:text-white">In pursuit of beauty</h3>
+                <h3 className="text-3xl font-serif mb-8 text-light-text dark:text-white">
+                  In pursuit of beauty
+                </h3>
                 <p className="text-light-text/80 dark:text-gray-300 leading-relaxed text-lg">
-                  Growing up seeing beauty in everything - from art to tech to human nature, I became fascinated by how ideas could elevate human experience and creative expression. Each project is an opportunity to craft something meaningful that resonates with people on a deeper level.
+                  Growing up seeing beauty in everything - from art to tech...
                 </p>
               </motion.div>
 
@@ -130,14 +147,16 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                <h3 className="text-3xl font-serif mb-8 text-light-text dark:text-white">Crafted with consciousness</h3>
+                <h3 className="text-3xl font-serif mb-8 text-light-text dark:text-white">
+                  Crafted with consciousness
+                </h3>
                 <p className="text-light-text/80 dark:text-gray-300 leading-relaxed text-lg">
-                  I believe the most meaningful creations come from deep understanding and conscious intention. My work aims to push boundaries while feeling natural, building products that serve our highest potential.
+                  I believe the most meaningful creations come from deep understanding...
                 </p>
               </motion.div>
             </div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -146,7 +165,7 @@ export default function Home() {
           </motion.section>
 
           {/* Education Section */}
-          <motion.section 
+          <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -155,13 +174,17 @@ export default function Home() {
             <h2 className="text-4xl font-serif mb-12">Education</h2>
             <div className="bg-light-surface/50 dark:bg-dark-surface/50 rounded-xl p-8">
               <h3 className="text-2xl font-serif mb-2">McGill University</h3>
-              <p className="text-light-text/80 dark:text-gray-300 mb-2">Bachelor of Arts | Economics & Anthropology</p>
-              <p className="text-light-muted dark:text-gray-400">Expected Graduation: May 2025</p>
+              <p className="text-light-text/80 dark:text-gray-300 mb-2">
+                Bachelor of Arts | Economics & Anthropology
+              </p>
+              <p className="text-light-muted dark:text-gray-400">
+                Expected Graduation: May 2025
+              </p>
             </div>
           </motion.section>
 
           {/* Skills Section */}
-          <motion.section 
+          <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -173,7 +196,10 @@ export default function Home() {
                 <h3 className="text-xl font-bold mb-4">Analytics Tools</h3>
                 <div className="flex flex-wrap gap-2">
                   {['Python', 'SQL', 'Power BI'].map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-light-surface/50 dark:bg-dark-surface/50 rounded-full text-sm">
+                    <span
+                      key={skill}
+                      className="px-3 py-1 bg-light-surface/50 dark:bg-dark-surface/50 rounded-full text-sm"
+                    >
                       {skill}
                     </span>
                   ))}
@@ -183,7 +209,10 @@ export default function Home() {
                 <h3 className="text-xl font-bold mb-4">Programming (Thru Gen AI)</h3>
                 <div className="flex flex-wrap gap-2">
                   {['Java', 'TypeScript', 'TSX'].map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-light-surface/50 dark:bg-dark-surface/50 rounded-full text-sm">
+                    <span
+                      key={skill}
+                      className="px-3 py-1 bg-light-surface/50 dark:bg-dark-surface/50 rounded-full text-sm"
+                    >
                       {skill}
                     </span>
                   ))}
@@ -193,7 +222,10 @@ export default function Home() {
                 <h3 className="text-xl font-bold mb-4">Business Intelligence</h3>
                 <div className="flex flex-wrap gap-2">
                   {['Google Analytics', 'Data Modeling', 'Excel', 'PowerPoint'].map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-light-surface/50 dark:bg-dark-surface/50 rounded-full text-sm">
+                    <span
+                      key={skill}
+                      className="px-3 py-1 bg-light-surface/50 dark:bg-dark-surface/50 rounded-full text-sm"
+                    >
                       {skill}
                     </span>
                   ))}
@@ -203,7 +235,7 @@ export default function Home() {
           </motion.section>
 
           {/* Certifications Section */}
-          <motion.section 
+          <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -219,7 +251,10 @@ export default function Home() {
                 'Bookkeeping, Intuit Quickbooks',
                 'Smart Serve Certification, AGCO'
               ].map((cert) => (
-                <div key={cert} className="bg-light-surface/50 dark:bg-dark-surface/50 rounded-lg p-6">
+                <div
+                  key={cert}
+                  className="bg-light-surface/50 dark:bg-dark-surface/50 rounded-lg p-6"
+                >
                   <p className="text-lg font-medium">{cert}</p>
                 </div>
               ))}
@@ -227,7 +262,7 @@ export default function Home() {
           </motion.section>
 
           {/* Languages Section */}
-          <motion.section 
+          <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -249,10 +284,9 @@ export default function Home() {
               </div>
             </div>
           </motion.section>
-        
 
-        {/* Introduction Section */}
-        <motion.section 
+          {/* Introduction Section */}
+          <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -264,20 +298,23 @@ export default function Home() {
                 <h2 className="text-4xl font-serif mb-6">
                   See more
                   <span className="text-cyan-400 block"> creative direction </span>
-                  
                   <span className="font-sans italic block mt-2">here ✧ </span>
                 </h2>
-                <Button 
+                <Button
                   className="mt-8 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full px-6 py-3 flex items-center gap-2 transition-all duration-300"
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                   onClick={() => window.location.href = 'https://www.eleventhavenuestudios.com/'}
                 >
                   View My Work
-                  <ArrowRight className={`transition-transform duration-300 ${isHovered ? 'translate-x-1' : ''}`} />
+                  <ArrowRight
+                    className={`transition-transform duration-300 ${
+                      isHovered ? 'translate-x-1' : ''
+                    }`}
+                  />
                 </Button>
               </div>
-              <motion.div 
+              <motion.div
                 initial={{ rotate: -6, opacity: 0 }}
                 whileInView={{ rotate: 0, opacity: 1 }}
                 viewport={{ once: true }}
@@ -285,7 +322,7 @@ export default function Home() {
                 className="relative aspect-square"
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-transparent rounded-lg transform -rotate-6" />
-                <img 
+                <img
                   src="/image.jpg"
                   alt="Portrait"
                   className="relative z-10 rounded-lg object-cover w-full h-full"
@@ -293,8 +330,9 @@ export default function Home() {
               </motion.div>
             </div>
           </motion.section>
-          </main>
-          <footer className="border-t border-light-surface/20 dark:border-white/10 py-12">
+        </main>
+
+        <footer className="border-t border-light-surface/20 dark:border-white/10 py-12">
           <div className="max-w-6xl mx-auto px-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-8">
               <div className="text-2xl font-serif">
@@ -308,36 +346,38 @@ export default function Home() {
                 </motion.div>
               </div>
               <div className="flex gap-8">
-                <a 
-                  href="https://www.youtube.com/@TUUUNDE" 
+                <a
+                  href="https://www.youtube.com/@TUUUNDE"
                   className="text-light-muted hover:text-light-accent dark:text-gray-400 dark:hover:text-cyan-400 transition-all duration-300 hover:scale-110"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Youtube
                 </a>
-                <a 
-                  href="https://linkedin.com/in/tundeogunremi" 
+                <a
+                  href="https://linkedin.com/in/tundeogunremi"
                   className="text-light-muted hover:text-light-accent dark:text-gray-400 dark:hover:text-cyan-400 transition-all duration-300 hover:scale-110"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   LinkedIn
                 </a>
-                <a 
-                  href="https://github.com/eleventhavenue" 
+                <a
+                  href="https://github.com/eleventhavenue"
                   className="text-light-muted hover:text-light-accent dark:text-gray-400 dark:hover:text-cyan-400 transition-all duration-300 hover:scale-110"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   GitHub
                 </a>
-                <a 
-          href="mailto:tundejogunremi@gmail.com"
-          className="text-light-muted hover:text-light-accent dark:text-gray-400 dark:hover:text-cyan-400 transition-all duration-300 hover:scale-110"
+                <a
+                  href="mailto:tundejogunremi@gmail.com"
+                  className="text-light-muted hover:text-light-accent dark:text-gray-400 dark:hover:text-cyan-400 transition-all duration-300 hover:scale-110"
                   target="_blank"
                   rel="noopener noreferrer"
-        > Email</a>
+                >
+                  Email
+                </a>
               </div>
             </div>
           </div>
