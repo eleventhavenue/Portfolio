@@ -137,7 +137,7 @@ export default function Home() {
                   In pursuit of beauty
                 </h3>
                 <p className="text-light-text/80 dark:text-gray-300 leading-relaxed text-lg">
-                  Growing up seeing beauty in everything - from art to tech...
+                Growing up seeing beauty in everything - from art to tech to human nature, I became fascinated by how ideas could elevate human experience and creative expression. Each project is an opportunity to craft something meaningful that resonates with people on a deeper level.
                 </p>
               </motion.div>
 
@@ -151,7 +151,7 @@ export default function Home() {
                   Crafted with consciousness
                 </h3>
                 <p className="text-light-text/80 dark:text-gray-300 leading-relaxed text-lg">
-                  I believe the most meaningful creations come from deep understanding...
+                I believe the most meaningful creations come from deep understanding and conscious intention. My work aims to push boundaries while feeling natural, building products that serve our highest potential.
                 </p>
               </motion.div>
             </div>
