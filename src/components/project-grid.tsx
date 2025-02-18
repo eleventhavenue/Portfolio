@@ -29,7 +29,7 @@ const projects: Project[] = [
     title: "VC VANTAGE",
     subtitle: "Investment Analytics Platform",
     description: "AI-powered due diligence reporting tool for venture capital funds and angel investors, featuring interactive dashboards and predictive analytics for market opportunities.",
-    image: "/vcvantage.png",  // updated path to SVG
+    image: "/vcvantage.jpg",  // updated path to SVG
     tags: ["Due Diligence", "TypeScript", "Data Analytics", "Reports"],
     links: {
       github: "https://github.com/eleventhavenue/VC-Vantage",

@@ -27,20 +27,19 @@ export default function Home() {
     <ThemeProvider>
       {/* 2) Add Helmet block to set up SEO-related meta tags */}
       <Helmet>
-        <title>Tunde Ogunremi | Portfolio</title>
-        <meta
-          name="description"
-          content="Welcome to the official portfolio of Tunde Ogunremi. Explore my experience, featured projects, and the creative vision behind my work."
-        />
-        {/* canonical URL can be your domain */}
-        <link rel="canonical" href="https://www.yourdomain.com" />
-        
-        {/* Optional keywords meta tag (less influential than it once was) */}
-        <meta
-          name="keywords"
-          content="Tunde Ogunremi, portfolio, machine learning, data analytics, projects, Eleventh Avenue Studios"
-        />
-      </Helmet>
+  <title>Tunde Ogunremi | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Welcome to the official portfolio of Tunde Ogunremi. Explore my experience, featured projects, and the creative vision behind my work."
+  />
+  <link rel="canonical" href="https://tundeogunremi.com" />
+  <meta
+    name="keywords"
+    content="Tunde Ogunremi, portfolio, machine learning, data analytics, projects, Eleventh Avenue Studios"
+  />
+</Helmet>
+
 
       <div className="min-h-screen bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text">
         <Navigation />
